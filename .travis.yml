@@ -17,3 +17,6 @@ services:
   
 script:
   - ./gradlew sonarqube
+
+after_failure:
+ - cat /home/travis/build/welldoer/SWT-WarmUp-Lab/build/reports/tests/test/index.html
