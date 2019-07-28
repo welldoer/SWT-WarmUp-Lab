@@ -16,7 +16,6 @@ services:
   - xvfb
   
 script:
-  - ./gradlew test --debug --stacktrace
   - ./gradlew sonarqube
 
 after_failure:
