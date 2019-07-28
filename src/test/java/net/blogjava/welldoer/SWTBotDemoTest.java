@@ -16,7 +16,7 @@ public class SWTBotDemoTest
     {
         SWTBotPreferences.PLAYBACK_DELAY = 100; // slow down tests...Otherwise we won't see anything
 
-        Display display = new Display();
+        Display display = Display.getDefault();
         Shell shell = new SampleSWTUI().showGUI(display);
         SWTBot bot = new SWTBot(shell);
 
