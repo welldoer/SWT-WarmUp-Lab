@@ -16,6 +16,7 @@ services:
   - xvfb
   
 script:
+  - sudo apt-get install at-spi2-core
   - ./gradlew sonarqube
 
 after_failure:
