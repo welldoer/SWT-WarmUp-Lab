@@ -16,6 +16,7 @@ services:
   - xvfb
   
 script:
+  // 修复 org.freedesktop.DBus.Error.ServiceUnknown 警告
   - sudo apt-get install at-spi2-core
   - ./gradlew sonarqube
 
