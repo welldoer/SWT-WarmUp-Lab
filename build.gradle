@@ -31,6 +31,11 @@ repositories {
     // Use jcenter for resolving your dependencies.
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
+    
+    // SWT
+    maven {  url "http://nexus.pentaho.org/content/groups/omni/" }
+    // SWTBot
+    maven { url "https://artifacts-oss.talend.com/nexus/content/repositories/TalendOpenSourceRelease/" }
 }
 
 dependencies {
@@ -40,6 +45,11 @@ dependencies {
 	implementation 'commons-beanutils:commons-beanutils:1.9.2'
 	implementation 'org.apache.commons:commons-compress:1.14'
 	implementation 'org.apache.commons:commons-lang3:3.9'
+
+	// SWT
+    implementation( 'org.eclipse.swt:org.eclipse.swt.cocoa.macosx.x86_64:4.6' )
+	// SWTBot Zip打包文件
+	testImplementation 'org.talend.repo:talend-swtbot:2.7.0'
 
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
