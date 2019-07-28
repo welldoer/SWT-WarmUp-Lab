@@ -34,8 +34,9 @@ repositories {
     
     // SWT
     maven {  url "http://nexus.pentaho.org/content/groups/omni/" }
+	// 对获取的 SWTBot 2.7 Zip 文件，提取其中的 jar 文件
     // SWTBot
-    maven { url "https://artifacts-oss.talend.com/nexus/content/repositories/TalendOpenSourceRelease/" }
+//	maven { url "https://artifacts-oss.talend.com/nexus/content/repositories/TalendOpenSourceRelease/" }
 }
 
 dependencies {
@@ -49,7 +50,9 @@ dependencies {
 	// SWT
     implementation( 'org.eclipse.swt:org.eclipse.swt.cocoa.macosx.x86_64:4.6' )
 	// SWTBot Zip打包文件
-	testImplementation 'org.talend.repo:talend-swtbot:2.7.0'
+//	testImplementation 'org.talend.repo:talend-swtbot:2.7.0'
+	// SWTBot 改用从 Zip 文件提供的 jar 包来本地加载
+	testImplementation fileTree(dir:'swtbot-libs/plugins', includes:['*jar'])
 
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
