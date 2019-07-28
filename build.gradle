@@ -13,6 +13,9 @@ plugins {
     // Apply the application plugin to add support for building an application
     id 'application'
 
+	// support SWT/JFace - automated newest jar
+	id "com.diffplug.gradle.swt.nativedeps" version "3.17.7"
+
 	id "org.sonarqube" version "2.7"
 	id 'jacoco'
 }
@@ -32,8 +35,8 @@ repositories {
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
     
-    // SWT
-    maven {  url "http://nexus.pentaho.org/content/groups/omni/" }
+    // SWT 暂时不用此方式来获取相应的 jar 
+    // maven {  url "http://nexus.pentaho.org/content/groups/omni/" }
 	// 对获取的 SWTBot 2.7 Zip 文件，提取其中的 jar 文件
     // SWTBot
 //	maven { url "https://artifacts-oss.talend.com/nexus/content/repositories/TalendOpenSourceRelease/" }
@@ -47,9 +50,9 @@ dependencies {
 	implementation 'org.apache.commons:commons-compress:1.14'
 	implementation 'org.apache.commons:commons-lang3:3.9'
 
-	// SWT
-    implementation( 'org.eclipse.swt:org.eclipse.swt.gtk.linux.x86_64:4.6' )
-    implementation( 'org.eclipse.swt:org.eclipse.swt.cocoa.macosx.x86_64:4.6' )
+	// SWT 暂时不用此方式来获取相应的 jar
+	//implementation( 'org.eclipse.swt:org.eclipse.swt.gtk.linux.x86_64:4.6' )
+	//implementation( 'org.eclipse.swt:org.eclipse.swt.cocoa.macosx.x86_64:4.6' )
 	// SWTBot Zip打包文件
 //	testImplementation 'org.talend.repo:talend-swtbot:2.7.0'
 	// SWTBot 改用从 Zip 文件提供的 jar 包来本地加载
