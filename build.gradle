@@ -48,6 +48,7 @@ dependencies {
 	implementation 'org.apache.commons:commons-lang3:3.9'
 
 	// SWT
+    implementation( 'org.eclipse.swt:org.eclipse.swt.gtk.linux.x86_64:4.6' )
     implementation( 'org.eclipse.swt:org.eclipse.swt.cocoa.macosx.x86_64:4.6' )
 	// SWTBot Zip打包文件
 //	testImplementation 'org.talend.repo:talend-swtbot:2.7.0'
