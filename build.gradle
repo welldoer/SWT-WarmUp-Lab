@@ -12,9 +12,22 @@ plugins {
 
     // Apply the application plugin to add support for building an application
     id 'application'
+
+	id "org.sonarqube" version "2.7"
+	id 'jacoco'
+}
+
+sonarqube {
+  properties {
+    property "sonar.projectKey", "welldoer_SWT-WarmUp-Lab"
+  }
 }
 
 repositories {
+    mavenLocal()
+	maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+	mavenCentral()
+
     // Use jcenter for resolving your dependencies.
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
@@ -24,8 +37,15 @@ dependencies {
     // This dependency is found on compile classpath of this component and consumers.
     implementation 'com.google.guava:guava:26.0-jre'
 
+	implementation 'commons-beanutils:commons-beanutils:1.9.2'
+	implementation 'org.apache.commons:commons-compress:1.14'
+	implementation 'org.apache.commons:commons-lang3:3.9'
+
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
+
+	testImplementation 'org.assertj:assertj-core:3.11.1'
+	testImplementation "org.mockito:mockito-core:2.28.2"
 }
 
 // Define the main class for the application

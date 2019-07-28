@@ -1,0 +1,21 @@
+language: java
+
+addons:
+  sonarcloud:
+    organization: "welldoer-github"
+    token:
+      secure: "6c22310b31701788079f8760577fe271f7dc11e6"
+
+cache:
+  directories:
+    - "$HOME/.gradle"
+    - "$HOME/.m2/repository"
+    - "$HOME/.sonar/cache"
+
+before_script:
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
+  - sleep 3 # give xvfb some time to start
+
+script:
+  - ./gradlew sonarqube

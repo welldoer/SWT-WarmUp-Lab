@@ -1,5 +1,12 @@
 # SWT-WarmUp-Lab
 
+阅读《Eclipse 从入门到精通》，学习 SWT/JFace 开发
+
+[![Build Status](https://travis-ci.com/welldoer/SWT-WarmUp-Lab.svg?branch=master)](https://travis-ci.com/welldoer/SWT-WarmUp-Lab)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=welldoer_SWT-WarmUp-Lab&metric=coverage)](https://sonarcloud.io/dashboard?id=welldoer_SWT-WarmUp-Lab)
+
+【说明】
+
 
 
 #### 待开发任务清单
